@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aj Tourist</title>
+        <link rel="icon" href="C:\HTML\project 1 img\original-6333ec3100c4d487b574124ce05cb47d.jpg">
+        <style>
+           *{
+              padding: 0;
+              margin: 0;
+            }
+            li,#ul{
+              display: inline;
+              padding: 20px;
+              cursor: pointer;
+            }
+           .l:hover{
+              background-color:white;
+              color:darkorchid ;
+              border-radius: 20px;
+            }
+            #ul{
+              margin-left: 460px;
+            }
+            #nav{
+              background-color:darkorchid;
+              padding: 5px;
+              border-color: white;
+              border-width: 5px;
+              border-style: solid;
+              height: 80px;
+              color: white;
+            }
+            #img{
+              width:1260px;
+              height:450px;
+            }
+            #pic{
+              position: absolute;
+              z-index: 1;
+            }
+            #opacity{
+              background-color: black;
+              width: 1260px;
+              height: 450px;
+              margin-bottom: 500px;
+              position: absolute;
+              z-index: 2;
+              opacity: 0.5;
+            }
+            #txt{
+              position: relative;
+              z-index: 3;
+              color:white;
+              text-align: center;
+            }
+            #txt1{
+              margin-top: 110px;
+            }
+            #txt2{
+              margin-top:50px ;
+            }
+            #txt3{
+              margin: 30px;
+            }
+            #butt{
+              height: 40px;
+              width: 80px;
+              font-size: larger;
+              background-color: darkorchid;
+              margin-top: 20px;
+              color: white;
+            }
+            #About{
+              margin-top: 180px;
+              padding: 20px;
+            }
+            #img1{
+              height: 200px;
+              margin-top: 10px;
+              display: inline;
+            }
+            body{
+              background: linear-gradient(darkorchid,white,darkorchid,white);
+              background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="nav">
+        <h1 style="display: inline-block;">AJ Tour Organization</h1>
+        <ul id="ul">
+            <li class="l" onclick="about()">About Us</li>
+            <li class="l" onclick="contact()">Contact</li>
+            <li class="l" onclick="gal()">Gallery</li>
+            <!-- <li class="l" onclick="reg()">Registration</li> -->
+            <li class="l" onclick="book()">Resgistered</li>
+        </ul>
+    </div>
+    <div id="pic">
+        <img src="istockphoto-1356512120-612x612.jpg" id="img">
+    </div><div id="opacity"></div>
+    <div id="txt">
+         <h1 id="txt1">Lifelong memories just a few seconds away</h1>
+         <h3 id="txt2">Let's Start Journey with us Your Dream will come true</h3>
+         <h3 id="txt3">Upto 40% Offer on Couples Vacation Hurry Up Book your Tours! </h3>
+         <button id="butt" onclick="exp()">Explore</button>
+    </div>
+    <div id="About">
+        <h2>About Us</h2>
+        <img src="9c12f09d0a7c58c48df4912d3dccb429.jpg" id="img1">
+        <b><i><P style="display: inline;">At AJ Tourist, we pride ourselves on crafting unforgettable journeys through the vibrant tapestry of India's diverse landscapes and rich cultural heritage. With a deep-rooted passion for travel and a commitment to excellence, we curate experiences that immerse our guests in the soul-stirring beauty of India's iconic landmarks, hidden gems, and off-the-beaten-path treasures. Whether it's exploring the majestic forts and palaces of Rajasthan, delving into the spiritual sanctuaries of Varanasi, or savoring the flavors of India's culinary delights, we strive to exceed expectations and create memories that last a lifetime. With our dedicated team of knowledgeable guides, impeccable service, and personalized attention to detail, AJ Tourist invites you to embark on a journey of discovery and adventure across the enchanting landscapes of India.</P></i></b>
+    </div>
+    <center>
+        <h3>Our Famous Packages</h3><br>
+        <h6>Couple Combo|Friends Combo|Family Combo</h6><br>
+        <p id="ps">Let's see our Places</p><br> 
+        <img src="360_F_77002615_Gl1Hk6qZpi2xCAlX8EUTRLBqC4ei6QfC.jpg">
+        <h2>Goa</h2><br>
+        <b><p>Goa, a small state on the western coast of India, is renowned for its stunning beaches, vibrant nightlife, and rich cultural heritage. It seamlessly blends Indian and Portuguese influences, evident in its architecture, cuisine, and traditions. Goa offers a diverse range of experiences, from relaxing on sun-kissed shores and exploring lush hinterlands to enjoying lively music festivals and savoring delectable seafood. Its laid-back atmosphere and friendly locals make it a popular destination for tourists seeking both relaxation and adventure.</p></b><br>
+        <h5>Min-5000|Max-10000</h5>
+        <br>
+        <img src="maxresdefault.jpg"width=500>
+        <h2>Kodaikanal</h2><br>
+        <b><p>Kodaikanal, often referred to as the "Princess of Hill Stations," is a charming hill town in the southern Indian state of Tamil Nadu. Nestled in the Palani Hills of the Western Ghats, it is known for its cool climate, lush greenery, and breathtaking landscapes. Key attractions include the serene Kodaikanal Lake, the stunning views from Coaker's Walk, and the vibrant blooms of Bryant Park. The town's mist-covered mountains, cascading waterfalls, and tranquil environment make it a perfect retreat for nature lovers and those looking to escape the heat of the plains.</p></b><br>
+        <h5>Min-2500|Max-5000</h5>
+        <br>
+        <img src="7110478409.jpg"width=500>
+        <h2>Wayanad</h2><br>
+        <b><p >Wayanad, located in the northeastern part of Kerala, is a picturesque district known for its lush green landscapes, dense forests, and rich biodiversity. This enchanting region is characterized by its rolling hills, sprawling plantations, and stunning waterfalls. Major attractions include the Edakkal Caves, which feature ancient rock carvings, the scenic Wayanad Wildlife Sanctuary, and the serene Pookode Lake. Wayanad is also home to numerous trekking trails, offering breathtaking views of the Western Ghats. Its serene ambiance, coupled with a rich cultural heritage, makes Wayanad a perfect destination for nature enthusiasts and adventure seekers alike.</p></b><br>
+        <h5>Min-4000|Max-8000</h5>
+        <br>
+        <img src="f0fe68eca8ce050afd37a4456f3ccc3e.webp"width=500>
+        <h2>Varkala</h2><br>
+        <b><p>Varkala, a picturesque coastal town in Kerala, India, is renowned for its stunning cliffs, pristine beaches, and vibrant cultural scene. Perched along the Arabian Sea, Varkala's unique geography features dramatic red laterite cliffs that offer breathtaking views of the ocean and house numerous resorts, cafes, and shops. Papanasam Beach, also known as Varkala Beach, is famous for its natural springs believed to have medicinal properties and is a popular spot for both relaxation and rejuvenation. The town's spiritual ambiance is heightened by the ancient Janardhana Swamy Temple, a revered pilgrimage site. Varkala seamlessly blends natural beauty, cultural richness, and spiritual serenity, making it a must-visit destination in southern India.</p></b><br>
+        <h5>Min-5000|Max-10000</h5>
+        <br>
+    </center>
+    <hr>
+    <center>
+        <div id="footer">
+            <h1>Contact</h1> <br>               
+            <h4>Phone:7397177540</h4> <br>
+            <h4>Telephone:04563-245360</h4><br>
+            <h4>E-Mail:ajayrahul809@gmail.com</h4><br>
+            <h4>9th Street Avenue,Rajapalayam,Tamilnadu</h4><br>
+        <a href="registration.html">Registration Link</a>--<a href="www.instagram.com">Instagram</a>--<a href="www.twitter.com">Twitter</a>
+        </div>
+    </center><br>
+    </body>
+    
+    <script>
+        function about(){
+           var a=document.getElementById('About');
+           a.scrollIntoView({behavior:"smooth"});
+        }
+        function exp()
+        {
+            var a=document.getElementById('ps');
+            a.scrollIntoView({behavior:"smooth"});
+        }
+        function contact(){
+            var a=document.getElementById('footer')
+            a.scrollIntoView({behavior:"smooth"});
+        }
+        // function reg(){
+        //     location.href='registration.html';
+        // }
+        function gal(){
+          location.href='gallery.html'
+        }
+        function book(){
+          location.href='booked.php'
+        }
+    </script>
+</html>

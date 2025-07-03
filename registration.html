@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>registration</title>
+        <style>
+          #div1{
+            border-radius: 10px;
+            background-color: white;
+            color:darkorchid;
+            font-weight: bold;
+            width: 900px;
+            height: 450px;
+          }
+          body{
+            background: linear-gradient(darkorchid,white);
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          table{
+            padding-top: 40px;
+          }
+          input
+          {
+            color: darkorchid;
+          }
+          #butt{
+            margin-top: 20px;
+          }
+          #foot{
+            margin-top: 20px;
+          }
+        </style>
+    </head>
+
+    <body bgcolor="black" style="color: white;">
+       <center>
+           <h1>Booking Form</h1>
+           <h4>Enter the required details</h4>
+       </center>
+       <center>
+        <div id="div1">
+           <form method="post" action="registration.php" >
+              <table>
+                <tr>
+                    <td>Name</td>  <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>  <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Native</td>  <td><input type="text" name="native"></td>
+                </tr>
+                <tr>
+                    <td>Contact</td>  <td><input type="number" name="contact" onkeyup="validatecontact()" id="c"></td> <td><p id="c1"></p></td>
+                </tr>
+                <tr>
+                    <td>Email</td>  <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Choose the Place</td> <td><input type="radio"name=place value="Goa">Goa <input type="radio"name=place value="Kodaikanal">Kodaikanal <input type="radio"name=place value="Wayanad">Wayanad <input type="radio"name=place value="Varkala">Varkala</td>
+                </tr>
+                <tr>
+                   <td>How Many Peoples</td>  <td><input type="number" name="peoples">
+                </tr>
+                <tr>
+                   <td></td>  <td><input type="radio"name=p value="Couple">Couple <input type="radio"name=p value="Friends">Friends <input type="radio"name=p value="Family">Family</td>
+                </tr>
+                <tr>
+                    <td>Packages</td>  <td><input type="radio"name=x value="Minimum">Min <input type="radio"name=x value="Maximum">Max</td>
+                </tr>
+                <tr>
+                    <td></td>  <td><input type="submit" id="butt"></td>
+                </tr>
+              </table>
+           </form>
+           <p>Packages and Other Information will be send to your Email within 2 days</p>
+           <h3>Thank You Enjoy Your Vacation</h3>
+        </div>
+       </center>
+       <div id="foot">
+       <center>
+            <a href="home.html">Home</a>--<a href="www.instagram.com">Instagram</a>--<a href="www.twitter.com">Twitter</a>
+        </center></div>
+       </center>
+    </body>
+    <script>
+function validatecontact()
+{  
+    var contact=document.getElementById('c').value;
+    var regex=/^[0-9]{10,10}$/
+    var p=document.getElementById('c1')
+    if(regex.test(contact))
+        {
+            p.innerHTML='Valid Contact'
+            p.style.color="Green"
+        }
+    else if(contact==null)
+        {
+            p.innerHTML='Enter a Valid Contact'
+            p.style.color="Red"
+        }
+    else
+    {
+        p.innerHTML='Enter a Valid Contact'
+        p.style.color="Red"
+    }
+  }
+
+    </script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>log in</title>
+        <style>
+            #div1{
+    height: 380px;
+    width: 300px;
+    background-color: white;
+    margin-left: 475px;
+    margin-top: 60px;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    }
+    .txt{
+    color:darkorchid;
+    margin-left: 115px;
+    margin-top: 10px;
+    }
+
+.txt1{
+    color: darkorchid;
+    margin-left: 20px;
+    }
+
+#inp1,#inp2{
+    margin-left: 20px;
+    width: 250px;
+    height: 40px;
+    color: darkorchid;
+   }
+   #body{
+    background: linear-gradient(darkorchid,white);
+    background-attachment: fixed;
+}
+
+#p1,#p2
+{
+    margin-left: 20px;
+    color:darkorchid;
+}
+
+#button{
+    margin-left: 120px;
+    color: darkorchid;
+}
+#button:hover{
+    background-color: darkorchid;
+    color: white;
+}
+#button1{
+    color: darkorchid;
+    margin-top: 20px;
+}
+#button1:hover{
+    background-color: darkorchid;
+    color: white;
+}
+
+
+        </style>
+    </head>
+
+    <body>
+        <body id="body">
+            <form method="post" action="login.php">
+            <div id="div1">
+               <h2 class="txt">Log in</h2>
+               <h4 class="txt1">Username</h4>
+               <input type="text" id="inp1" placeholder="Enter your Name" onkeyup="namevalidate()" name="name" required>
+               <p id="p1"></p>
+               <h4 class="txt1">Password</h4>
+               <input type="password" id="inp2" placeholder="Enter Your Password" onkeyup="passvalidate()" name="password" required>
+               <p id="p2"></p>
+               <button id="button">Submit</button>
+               <center><a href="signin.html">New User?</a></center>
+            </div></form>
+           <center><button id="button1" onclick="submit()">Go</button></center>
+    </body>
+    <script>
+        function namevalidate()
+{
+    var inp1=document.getElementById('inp1').value
+    const regex=/^[A-Z a-z]{3,}$/
+    const p=document.getElementById('p1')
+    if(regex.test(inp1))
+        {
+            p.innerHTML="Valid Name"
+            p.style.color="green"
+        }  
+    else if(inp1==null)
+        {
+            p.innerHTML="Invalid Name"
+            p.style.color="red"
+        }
+    else
+    {
+        p.innerHTML="Invalid Name"
+        p.style.color="red"
+    }
+}
+
+function passvalidate()
+{
+    var inp2=document.getElementById('inp2').value
+    const regex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+    const p1=document.getElementById('p2')
+    if(regex.test(inp2))
+        {
+            p1.innerHTML="Valid Password"
+            p1.style.color="green"
+        }  
+    else if(inp1==null)
+        {
+            p1.innerHTML="Invalid Password"
+            p1.style.color="red"
+        }
+    else
+    {
+        p1.innerHTML="Invalid Password"
+        p1.style.color="red"
+    }
+}
+function submit(){
+  var inp1=document.getElementById('inp1').value;
+  var inp2=document.getElementById('inp2').value;
+  if(inp1=="Admin"&&inp2=="Password12@")
+  {
+    window.alert("Welcome Admin");
+    location.href="home2.html";
+  }
+  else{
+    window.alert("Welcome"+ inp1);
+    location.href="home.html";
+  }}
+    </script>
+</html>
